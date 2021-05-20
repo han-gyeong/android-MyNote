@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Private Page"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@id/numberField"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/numberShower"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/button_background"
+        android:padding="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.3">
+
+        <TextView
+            android:id="@+id/TextView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            android:text="@string/default_value"
+            android:textColor="@color/black"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@id/TextView2"
+            app:layout_constraintEnd_toStartOf="@id/TextView2"
+            app:layout_constraintStart_toStartOf="@id/numberShower"
+            app:layout_constraintTop_toTopOf="@id/TextView2" />
+
+        <TextView
+            android:id="@+id/TextView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            android:text="@string/default_value"
+            android:textColor="@color/black"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@id/TextView3"
+            app:layout_constraintEnd_toStartOf="@id/TextView3"
+            app:layout_constraintTop_toTopOf="@id/TextView3" />
+
+        <TextView
+            android:id="@+id/TextView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            android:text="@string/default_value"
+            android:textColor="@color/black"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@id/TextView4"
+            app:layout_constraintEnd_toStartOf="@id/TextView4"
+            app:layout_constraintTop_toTopOf="@id/TextView4" />
+
+        <TextView
+            android:id="@+id/TextView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/default_value"
+            android:textColor="@color/black"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@id/TextView3"
+            app:layout_constraintEnd_toEndOf="@id/numberShower"
+            app:layout_constraintTop_toTopOf="@id/TextView3" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/numberField"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/button_background"
+        android:backgroundTint="#CBC8C8"
+        android:padding="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/numberShower"
+        app:layout_constraintVertical_bias="0.3">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/number1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_background"
+            android:text="1"
+            app:layout_constraintHorizontal_chainStyle="spread"
+            app:layout_constraintStart_toStartOf="@id/numberField"
+            app:layout_constraintTop_toTopOf="@id/numberField"
+            app:layout_constraintVertical_chainStyle="spread" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/number2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_background"
+            android:text="2"
+            app:layout_constraintBottom_toBottomOf="@id/number1"
+            app:layout_constraintStart_toEndOf="@id/number1"
+            app:layout_constraintTop_toTopOf="@id/number1" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/number3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_background"
+            android:text="3"
+            app:layout_constraintBottom_toBottomOf="@id/number2"
+            app:layout_constraintEnd_toEndOf="@id/numberField"
+            app:layout_constraintStart_toEndOf="@id/number2"
+            app:layout_constraintTop_toTopOf="@id/number2" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/number4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_background"
+            android:text="4"
+            app:layout_constraintBottom_toTopOf="@id/number7"
+            app:layout_constraintStart_toStartOf="@id/numberField"
+            app:layout_constraintTop_toBottomOf="@id/number1" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/number5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_background"
+            android:text="5"
+            app:layout_constraintStart_toEndOf="@id/number4"
+            app:layout_constraintTop_toBottomOf="@id/number2" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/number6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_background"
+            android:text="6"
+            app:layout_constraintStart_toEndOf="@id/number5"
+            app:layout_constraintTop_toBottomOf="@id/number3" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/number7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_background"
+            android:text="7"
+            app:layout_constraintStart_toStartOf="@id/numberField"
+            app:layout_constraintTop_toBottomOf="@id/number4" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/number8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_background"
+            android:text="8"
+            app:layout_constraintStart_toEndOf="@id/number7"
+            app:layout_constraintTop_toBottomOf="@id/number5" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/number9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_background"
+            android:text="9"
+            app:layout_constraintStart_toEndOf="@id/number8"
+            app:layout_constraintTop_toBottomOf="@id/number6" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/number0"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_background"
+            android:text="0"
+            app:layout_constraintEnd_toEndOf="@id/numberField"
+            app:layout_constraintStart_toStartOf="@id/numberField"
+            app:layout_constraintTop_toBottomOf="@id/number8" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/loginButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/button_background"
+        android:text="로그인"
+        app:layout_constraintEnd_toStartOf="@id/resetButton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/numberField" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/resetButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/button_background"
+        android:text="초기화"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/loginButton"
+        app:layout_constraintTop_toBottomOf="@id/numberField" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
