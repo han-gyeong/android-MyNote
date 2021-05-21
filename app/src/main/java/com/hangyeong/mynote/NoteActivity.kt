@@ -25,9 +25,6 @@ class NoteActivity : AppCompatActivity() {
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         if (item.itemId == R.id.password_change) {
-            Toast.makeText(this, "패스워드 변경 누르기", Toast.LENGTH_SHORT).show()
-            // TODO 비밀번호 변경 액티비티로 startActivity
-            // 비밀번호를 Intent 로 넘길까?
             startActivity(Intent(this, PasswordActivity::class.java))
         }
         return super.onOptionsItemSelected(item)

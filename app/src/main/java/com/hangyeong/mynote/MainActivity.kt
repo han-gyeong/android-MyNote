@@ -44,9 +44,6 @@ class MainActivity : AppCompatActivity() {
     private var clickedNumber = mutableListOf<Int>()
 
     override fun onCreate(savedInstanceState: Bundle?) {
-        val passwordPreferences = getSharedPreferences("Password", Context.MODE_PRIVATE)
-        val password = passwordPreferences.getString("password", "0000")
-        Log.d("Syntax", "$password")
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
@@ -58,7 +55,6 @@ class MainActivity : AppCompatActivity() {
                 }
                 numberView[clickedNumber.size].text = i.toString()
                 clickedNumber.add(i)
-                Log.d("Syntax", "$clickedNumber")
             }
         }
 
@@ -67,6 +63,8 @@ class MainActivity : AppCompatActivity() {
         }
 
         loginButton.setOnClickListener {
+            val passwordPreferences = getSharedPreferences("Password", Context.MODE_PRIVATE)
+            val password = passwordPreferences.getString("password", "0000")
             val passwordInput = "${numberView[0].text}${numberView[1].text}${numberView[2].text}${numberView[3].text}"
             if (password == passwordInput) {
                 startActivity(Intent(this, NoteActivity::class.java))

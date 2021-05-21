@@ -28,26 +28,30 @@ class PasswordActivity : AppCompatActivity() {
 
         passwordChange.setOnClickListener {
             val changeResult = passwordChanger(currentPasswordInput.text.toString(), changePasswordInput.text.toString())
-            if (changeResult) {
+            if (changeResult == 1) {
                 Toast.makeText(this, "비밀번호 변경 완료!", Toast.LENGTH_SHORT).show()
                 finish()
+            } else if (changeResult == 2) {
+                Toast.makeText(this, "이전 비밀번호와 변경 비밀번호가 같습니다.", Toast.LENGTH_SHORT).show()
             } else {
                 Toast.makeText(this, "비밀번호 변경 실패", Toast.LENGTH_SHORT).show()
             }
         }
     }
 
-    // 저장이 안된다?
-    private fun passwordChanger(pwd1 : String, pwd2 : String): Boolean {
+    private fun passwordChanger(pwd1 : String, pwd2 : String): Int {
         val passwordPreferences = getSharedPreferences("Password", Context.MODE_PRIVATE)
         val password = passwordPreferences.getString("password", "0000")
         if (password.equals(pwd1)) {
+            if (pwd1 == pwd2) {
+                return 2 // 패스워드와 입력받은 패스워드는 같으나, 기존 == 변경일때.
+            }
             passwordPreferences.edit {
                 putString("password", pwd2)
                 apply()
             }
-            return true
+            return 1 // 패스워드와 입력받은 패스워드가 같을때, 변경 성공.
         }
-        return false
+        return 0 // 기존 패스워드를 다르게 입력했을때.
     }
 }
