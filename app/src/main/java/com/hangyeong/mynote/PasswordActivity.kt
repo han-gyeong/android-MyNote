@@ -33,8 +33,11 @@ class PasswordActivity : AppCompatActivity() {
                 finish()
             } else if (changeResult == 2) {
                 Toast.makeText(this, "이전 비밀번호와 변경 비밀번호가 같습니다.", Toast.LENGTH_SHORT).show()
-            } else {
-                Toast.makeText(this, "비밀번호 변경 실패", Toast.LENGTH_SHORT).show()
+            } else if (changeResult == 3) {
+                Toast.makeText(this, "패스워드 입력에 빈칸이 존재합니다.", Toast.LENGTH_SHORT).show()
+            }
+            else {
+                Toast.makeText(this, "기존 패스워드가 일치하지 않습니다.", Toast.LENGTH_SHORT).show()
             }
         }
     }
@@ -42,6 +45,9 @@ class PasswordActivity : AppCompatActivity() {
     private fun passwordChanger(pwd1 : String, pwd2 : String): Int {
         val passwordPreferences = getSharedPreferences("Password", Context.MODE_PRIVATE)
         val password = passwordPreferences.getString("password", "0000")
+        if (pwd1 == "" || pwd2 == "") {
+            return 3 // 둘 중 하나라도 빈칸이 존재할 때
+        }
         if (password.equals(pwd1)) {
             if (pwd1 == pwd2) {
                 return 2 // 패스워드와 입력받은 패스워드는 같으나, 기존 == 변경일때.

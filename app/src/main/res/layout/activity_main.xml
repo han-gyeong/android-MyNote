@@ -11,7 +11,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:gravity="center"
-        android:text="Private Page"
+        android:text="@string/title"
         android:textColor="@color/black"
         android:textSize="24sp"
         android:textStyle="bold"
@@ -203,7 +203,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:background="@drawable/button_background"
-        android:text="로그인"
+        android:text="@string/login"
         app:layout_constraintEnd_toStartOf="@id/resetButton"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/numberField" />
@@ -214,7 +214,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:background="@drawable/button_background"
-        android:text="초기화"
+        android:text="@string/reset"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@id/loginButton"
         app:layout_constraintTop_toBottomOf="@id/numberField" />

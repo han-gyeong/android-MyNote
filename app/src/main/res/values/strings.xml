@@ -4,4 +4,5 @@
     <string name="passwordActivityTitle">Password Change</string>
     <string name="reset">초기화</string>
     <string name="login">로그인</string>
+    <string name="title">Private Memo</string>
 </resources>

@@ -3,4 +3,7 @@
     <string name="app_name">MyNote</string>
     <string name="reset">Clear</string>
     <string name="login">Login</string>
+    <string name="title">Private Memo</string>
+    <string name="passwordActivityTitle">Password Change</string>
+    <string name="default_value">*</string>
 </resources>
