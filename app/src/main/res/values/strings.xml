@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">MyNote</string>
     <string name="default_value">*</string>
+    <string name="passwordActivityTitle">Password Change</string>
 </resources>

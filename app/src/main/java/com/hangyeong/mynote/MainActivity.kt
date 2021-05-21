@@ -9,6 +9,7 @@ import android.widget.Button
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
+import androidx.core.content.edit
 import org.w3c.dom.Text
 
 class MainActivity : AppCompatActivity() {
@@ -45,6 +46,7 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         val passwordPreferences = getSharedPreferences("Password", Context.MODE_PRIVATE)
         val password = passwordPreferences.getString("password", "0000")
+        Log.d("Syntax", "$password")
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 

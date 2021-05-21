@@ -14,4 +14,5 @@
         <!-- Customize your theme here. -->
     </style>
     <style name="Theme.MyNote.NoActionBar" parent="Theme.MaterialComponents.DayNight.NoActionBar"/>
+    <style name="Theme.MyNote.Dialog" parent="Theme.AppCompat.Dialog"/>
 </resources>
